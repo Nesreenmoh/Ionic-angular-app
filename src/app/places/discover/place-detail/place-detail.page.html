@@ -3,13 +3,18 @@
     <ion-button slot="start">
       <ion-back-button defaultHref="/places/tabs/discover"></ion-back-button>
     </ion-button>
-    <ion-title>{{place.title}}</ion-title>
-
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
- <ion-button color="primary" (click)="onBookPlace()">
-   Book
- </ion-button>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-title>{{place.title}}</ion-title>
+        <ion-button color="primary" (click)="onBookPlace()">
+          Book
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

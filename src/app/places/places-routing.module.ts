@@ -26,7 +26,7 @@ const routes: Routes = [
         children: [
           {
             path:'',
-            loadChildren: () =>import('./offers/offers-routing.module').then( m => m.OffersPageRoutingModule)
+            loadChildren: () =>import('./offers/offers.module').then( m => m.OffersPageModule)
           },
           {
             path:'new', // hard coded must be go first before dynamic
