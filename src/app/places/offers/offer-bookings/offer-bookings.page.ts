@@ -20,7 +20,7 @@ export class OfferBookingsPage implements OnInit {
         this.navCtrl.navigateBack('/places/tabs/offers');
         return;
       }
-      this.place = this.placeSvr.getPlace(paraMap.get('placeId'));
+    this.place = this.placeSvr.getPlace(paraMap.get('placeId'));
     });
   }
 

@@ -43,11 +43,15 @@ export class PlaceDetailPage implements OnInit {
     actionSheetElm.present();
   });
 }
-  
+
+
+
   openBookingModal(mode: 'select'| 'random'){
 console.log(mode);
-this.modelCtrl.create({component: CreateBookingComponent, 
-  componentProps: { selectedPlace: this.place}}).then(modelEl =>{
+this.modelCtrl.
+  create({component: CreateBookingComponent, 
+  componentProps: { selectedPlace: this.place, selectedMode: mode}})
+  .then(modelEl =>{
     modelEl.present();
     return modelEl.onDidDismiss();
 }).then(resultData =>{
@@ -55,7 +59,5 @@ this.modelCtrl.create({component: CreateBookingComponent,
    if(resultData.role=== 'confirm')
    console.log('booked!');  
 });
-
   }
-
 }
